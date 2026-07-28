@@ -8,7 +8,6 @@ const currentYear = new Date().getFullYear();
 
 <!--<div class="border-t border-[var(&#45;&#45;primary)] mx-16 border-dashed py-8 max-w-[var(&#45;&#45;page-width)] flex flex-col items-center justify-center px-6">-->
 <div class="transition border-t border-black/10 dark:border-white/15 my-10 border-dashed mx-32"></div>
-<!--<div class="transition bg-[oklch(92%_0.01_var(&#45;&#45;hue))] dark:bg-black rounded-2xl py-8 mt-4 mb-8 flex flex-col items-center justify-center px-6">-->
 <div class="transition border-dashed border-[oklch(85%_0.01_var(--hue))] dark:border-white/15 rounded-2xl mb-12 flex flex-col items-center justify-center px-6">
     <div class="transition text-50 text-sm text-center">
         &copy; <span id="copyright-year">{currentYear}</span> {profileConfig.name}. All Rights Reserved. /
@@ -18,4 +17,60 @@ const currentYear = new Date().getFullYear();
         <a class="transition link text-[var(--primary)] font-medium" target="_blank" href="https://astro.build">Astro</a> &
         <a class="transition link text-[var(--primary)] font-medium" target="_blank" href="https://github.com/saicaca/fuwari">Fuwari</a>
     </div>
+
+    <!-- Dynamic footer extras -->
+    <div class="transition text-50 text-xs text-center mt-4 space-y-1 opacity-70">
+        <div id="footer-clock" class="font-mono"></div>
+        <div id="footer-voyager" class="font-mono"></div>
+    </div>
 </div>
+
+<script>
+// --- Live Clock ---
+function updateClock() {
+    const el = document.getElementById('footer-clock');
+    if (!el) return;
+    const now = new Date();
+    const str = now.toLocaleString('zh-CN', {
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+        hour: '2-digit',
+        minute: '2-digit',
+        second: '2-digit',
+        hour12: false,
+        timeZone: 'Asia/Shanghai',
+    });
+    el.textContent = `⏰ ${str} (UTC+8)`;
+}
+updateClock();
+setInterval(updateClock, 1000);
+
+// --- Voyager 1 ---
+// Data from NASA: https://voyager.jpl.nasa.gov/mission/status/
+// Launch: 1977-09-05, velocity ~17 km/s relative to Sun
+// Baseline: 2026-01-01, distance ~249 亿 km (~166.5 AU)
+const voyagerBaseDist = 24.9e9;     // km on 2026-01-01
+const voyagerBaseTime = new Date('2026-01-01T00:00:00Z').getTime();
+const voyagerSpeed = 17;             // km/s
+const AU = 149597870.7;              // km per AU
+
+function updateVoyager() {
+    const el = document.getElementById('footer-voyager');
+    if (!el) return;
+
+    const now = Date.now();
+    const elapsed = (now - voyagerBaseTime) / 1000;
+    const distKm = voyagerBaseDist + voyagerSpeed * elapsed;
+    const distYi = (distKm / 1e8).toFixed(2);       // 亿 km
+    const distAU = (distKm / AU).toFixed(2);
+    const lightTime = (distKm / 299792.458 / 3600).toFixed(1);
+
+    el.textContent =
+        '\u{1F6F0}️ Voyager 1 • ' +
+        distYi + ' 亿 km (' + distAU + ' AU) • ' +
+        '光速时间 ' + lightTime + ' h';
+}
+updateVoyager();
+setInterval(updateVoyager, 60000);
+</script>
