@@ -36,6 +36,7 @@ export type SiteConfig = {
 	};
 
 	favicon: Favicon[];
+	comments?: TwikooConfig;
 };
 
 export type Favicon = {
@@ -95,6 +96,12 @@ export type BlogPostData = {
 	prevSlug?: string;
 	nextTitle?: string;
 	nextSlug?: string;
+};
+
+export type TwikooConfig = {
+	enable: boolean;
+	envId: string;
+	lang?: string;
 };
 
 export type ExpressiveCodeConfig = {
