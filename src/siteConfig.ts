@@ -30,8 +30,8 @@ export const siteConfig: SiteConfig = {
 		// },
 	],
 	comments: {
-		enable: false,
-		envId: "",
+		enable: true,
+		envId: "https://twikoo-navy-two.vercel.app/",
 		lang: "zh-CN",
 	},
 };

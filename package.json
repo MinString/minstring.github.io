@@ -41,6 +41,7 @@
     "katex": "^0.18.1",
     "markdown-it": "^14.3.0",
     "mdast-util-to-string": "^4.0.0",
+    "mongodb": "^7.5.0",
     "overlayscrollbars": "^2.16.0",
     "pagefind": "^1.5.2",
     "photoswipe": "^5.4.4",
