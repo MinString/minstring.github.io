@@ -4,7 +4,7 @@ published: 2023-08-01
 description: 本文演示如何在博客文章中嵌入视频。
 tags: [Example, Video]
 category: Examples
-draft: false
+draft: true
 ---
 
 只需从 YouTube 或其他平台复制嵌入代码，然后粘贴到 Markdown 文件中即可。

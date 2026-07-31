@@ -5,7 +5,7 @@ description: "如何使用这个博客模板。"
 image: "./cover.jpeg"
 tags: ["Fuwari", "Blogging", "Customization"]
 category: Guides
-draft: false
+draft: true
 ---
 
 > 封面图片来源：[Source](https://image.civitai.com/xG1nkqKTMzGDvpLrqFT7WA/208fc754-890d-4adb-9753-2c963332675d/width=2048/01651-1456859105-(colour_1.5),girl,_Blue,yellow,green,cyan,purple,red,pink,_best,8k,UHD,masterpiece,male%20focus,%201boy,gloves,%20ponytail,%20long%20hair,.jpeg)
@@ -26,15 +26,15 @@ draft: false
 ---
 ```
 
-| 属性          | 描述                                                                                                                                                                               |
-|---------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `title`       | 文章的标题。                                                                                                                                                                       |
-| `published`   | 文章的发布日期。                                                                                                                                                                   |
-| `description` | 文章的简短描述，在首页显示。                                                                                                                                                       |
-| `image`       | 文章的封面图片路径。<br/>1. 以 `http://` 或 `https://` 开头：使用网络图片<br/>2. 以 `/` 开头：使用 `public` 目录中的图片<br/>3. 无以上任一前缀：相对于 Markdown 文件的位置        |
-| `tags`        | 文章的标签。                                                                                                                                                                       |
-| `category`    | 文章的分类。                                                                                                                                                                       |
-| `draft`        | 如果文章仍是草稿，则设为 `true`，不会被展示。                                                                                                                                      |
+| 属性　　　　　| 描述　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　 |
+| ---------------| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `title`　　　 | 文章的标题。　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　 |
+| `published`　 | 文章的发布日期。　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　 |
+| `description` | 文章的简短描述，在首页显示。　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　 |
+| `image`　　　 | 文章的封面图片路径。<br/>1. 以 `http://` 或 `https://` 开头：使用网络图片<br/>2. 以 `/` 开头：使用 `public` 目录中的图片<br/>3. 无以上任一前缀：相对于 Markdown 文件的位置 |
+| `tags`　　　　| 文章的标签。　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　 |
+| `category`　　| 文章的分类。　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　 |
+| `draft`　　　 | 如果文章仍是草稿，则设为 `true`，不会被展示。　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　　|
 
 ## 文章文件放置位置
 
