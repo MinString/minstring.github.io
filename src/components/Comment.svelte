@@ -11,7 +11,86 @@
 		lang?: string;
 	} = $props();
 
+	const TWIKOO_DARK_STYLE_ID = "twikoo-theme-adapt-style";
+
+	function injectTwikooThemeStyle() {
+		if (document.getElementById(TWIKOO_DARK_STYLE_ID)) return;
+
+		const style = document.createElement("style");
+		style.id = TWIKOO_DARK_STYLE_ID;
+		style.textContent = `
+html.dark .twikoo {
+	--tk-text: rgba(255, 255, 255, 0.75);
+	--tk-text-strong: rgba(255, 255, 255, 0.9);
+	--tk-border: rgba(255, 255, 255, 0.15);
+}
+
+html:not(.dark) .twikoo {
+	--tk-text: rgba(0, 0, 0, 0.75);
+	--tk-text-strong: rgba(0, 0, 0, 0.9);
+	--tk-border: rgba(0, 0, 0, 0.12);
+}
+
+.twikoo,
+.twikoo * {
+	color: var(--tk-text);
+}
+
+.twikoo .tk-comments-title,
+.twikoo .tk-nick,
+.twikoo .tk-nick-link {
+	color: var(--tk-text-strong) !important;
+}
+
+.twikoo .el-textarea__inner,
+.twikoo .el-input__inner,
+.twikoo textarea,
+.twikoo input {
+	background-color: var(--card-bg) !important;
+	color: var(--tk-text) !important;
+	border-color: var(--tk-border) !important;
+}
+
+.twikoo .tk-comment {
+	border-color: var(--tk-border);
+}
+
+.twikoo .el-button--primary {
+	background-color: var(--primary) !important;
+	border-color: var(--primary) !important;
+	color: #fff !important;
+}
+
+.twikoo a,
+.twikoo .tk-action-icon,
+.twikoo .tk-action-link {
+	color: var(--primary) !important;
+}
+
+html.dark .twikoo .OwO .OwO-body {
+	background-color: var(--card-bg) !important;
+	color: var(--tk-text) !important;
+	border-color: var(--tk-border) !important;
+}
+
+html:not(.dark) .twikoo .OwO .OwO-body {
+	background-color: #ffffff !important;
+	color: #4a4a4a !important;
+	border-color: rgba(144, 147, 153, 0.31) !important;
+}
+
+.twikoo .OwO .OwO-body .OwO-packages li,
+.twikoo .OwO .OwO-body .OwO-item,
+.twikoo .OwO .OwO-body .OwO-item-title {
+	color: inherit !important;
+}
+`.trim();
+		document.head.appendChild(style);
+	}
+
 	onMount(() => {
+		injectTwikooThemeStyle();
+
 		if (!envId) return;
 
 		const script = document.createElement("script");
