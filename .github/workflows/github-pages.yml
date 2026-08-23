@@ -38,11 +38,6 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
-      # GitHub Pages uses a project URL (/myBlog/), while Vercel stays at (/).
-      # Only the GitHub Pages build gets this base path; the repository config is unchanged.
-      - name: Set GitHub Pages base path
-        run: sed -i 's|base: "/"|base: "/myBlog/"|' astro.config.mjs
-
       - name: Build
         run: pnpm build
 
