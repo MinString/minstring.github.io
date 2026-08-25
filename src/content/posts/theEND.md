@@ -33,8 +33,9 @@ lang: 'zh_CN'
 # 序章·续
 高考之后，任务仍未结束。我去参加了强基计划的培训，延迟了放假，同样也延迟了分别。在强基培训的时光虽然学不太懂，但与好友的陪伴仍然是难得的。
 
-<!-- ![awa](/src/assets/images/post/theEND/theEND1.png) -->
-<img src="/src/assets/images/post/theEND/theEND1.png" alt="友" style="width: 30%; height: auto;">  
+![TY](../../assets/images/post/theEND/theEND1.png)
+
+<!-- <img src="/src/assets/images/post/theEND/theEND1.png" alt="友" style="width: 30%; height: auto;">   -->
 
 很幸运，我能够参加入围强基线，同样很幸运，我通过了校测，更幸运的是给我分到了一个我可以接受的专业，也在强基的时候又认识了一个朋友。那么高考真正的结束了。那么属于自己的生命终于启动了。那么，更大的责任与不确定性也降临了。
 
