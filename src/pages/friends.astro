@@ -1,22 +1,15 @@
 ---
-import MainGridLayout from "../layouts/MainGridLayout.astro";
 
-const friends = [
-	{
-		name: "你的名字",
-		description: "这里是友链介绍。",
-		url: "https://example.com",
-	},
-];
+import MainGridLayout from "../layouts/MainGridLayout.astro";
 ---
 
 <MainGridLayout title="友链" description="友链">
-	<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-		{friends.map((friend) => (
-			<a href={friend.url} target="_blank" rel="noopener noreferrer" class="card-base block p-6 transition hover:-translate-y-1">
-				<h2 class="text-xl font-bold">{friend.name}</h2>
-				<p class="mt-2 opacity-70">{friend.description}</p>
-			</a>
-		))}
-	</div>
+    <div class="flex w-full rounded-[var(--radius-large)] overflow-hidden relative min-h-32">
+        <div class="card-base z-10 px-9 py-6 relative w-full ">
+            <div class="mt-2">
+                <h2 class="text-2xl font-bold">友链</h2>
+                <p class="mt-3 opacity-70">这里是我的友情链接。</p>
+            </div>
+        </div>
+    </div>
 </MainGridLayout>
