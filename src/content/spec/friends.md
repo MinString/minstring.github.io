@@ -1,9 +1,9 @@
 # 友链
 >
->- 标题: MinString的博客
->- URL: <https://minstring.github.io>
->- LOGO: <https://minstring.github.io/logo.png>
->- 描述: 欢迎光临！
+>- 标题: `MinString的博客`
+>- URL: `https://minstring.github.io`
+>- LOGO: `https://minstring.github.io/_astro/avatar.aD-yk2BB_Z1u45Ik.webp`
+>- 描述: `欢迎光临！`
 >
 ---
 
