@@ -40,4 +40,16 @@
             <td style="text-align: center; vertical-align: middle;"><a target="_blank" href="https://maxlen727.github.io">网站</a></br></td>
         </tr>
     </tbody>
+<tbody>
+         <tr>
+            <td style="text-align: center; vertical-align: middle;">
+            <img class="customEntitityAlbum" style="background-color:transparent; width:100px; height:100px" src="https://tino912.github.io/pic/avatar_hu_877aeac4c4e2cb86.png"/>
+            </td>
+            <td style="text-align: center; vertical-align: middle;">
+              Tino
+            </td>
+            <td style="text-align: center; vertical-align: middle;">生活出拳我出布 天要塌了当床铺</td>
+            <td style="text-align: center; vertical-align: middle;"><a target="_blank" href="https://tino912.github.io/">网站</a></br></td>
+        </tr>
+    </tbody>
 </table>

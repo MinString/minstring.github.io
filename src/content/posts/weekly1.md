@@ -1,11 +1,11 @@
 ---
 title: 周刊第一期
-published: 2026-08-23
+published: 2026-09-01
 description: 'weekly1'
 image: ''
 tags: ['随笔']
 category: '随笔'
-draft: true
+draft: false
 lang: 'zh_CN'
 ---
 
