@@ -1,7 +1,7 @@
 ---
 title: 学习笔记1
 published: 2026-09-22
-description: ''
+description: '这是高代的第二周课'
 image: ''
 tags: ['学习笔记','高等线性代数']
 category: '学习笔记'
