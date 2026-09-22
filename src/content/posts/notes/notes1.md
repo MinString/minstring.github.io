@@ -81,7 +81,7 @@ A=(a_{i,j})_{m\times n}\text{，}\tilde{A}=\left(
 \right)
 \in M_{m \times n+1}(\mathbb{F})
 $$
-$$A\text{称为系数矩阵}(coefficient matrix)\text{，}\tilde{A}\text{称为增广矩阵}(augmented matrix)$$
+$$A\text{称为系数矩阵}(coefficient\;matrix)\text{，}\tilde{A}\text{称为增广矩阵}(augmented\;matrix)$$
 
 与线性方程组的初等变换类似，可以对系数矩阵(增广矩阵)作如下变换:
 
@@ -89,7 +89,7 @@ $$A\text{称为系数矩阵}(coefficient matrix)\text{，}\tilde{A}\text{称为�
 2. 用一个非$0$的数乘以某一行
 3. 将某一行乘以$k$加到某一行上
 
-称上面的三种变换称为矩阵的初等变换 $(elementary row transformation/operation)$，类似地有初等列变换 $(elementary column transformation/operation)$
+称上面的三种变换称为矩阵的初等变换 $(elementary\;row\;transformation/operation)$，类似地有初等列变换 $(elementary\;column\;transformation/operation)$
 
 ## 1.3向量空间
 
@@ -113,7 +113,7 @@ $$
 \text{，其中}a_i\in\mathbb{F}
 $$
 
-### 向量和线性方程组
+**向量和线性方程组**
 
 $$
 A=
@@ -145,3 +145,13 @@ $${\beta}_1x_1+{\beta}_2x_2+\dots+{\beta}_nx_n={\beta}$$
 现在考虑$(*)$是否有解。现在可以这样表述：
 
 $$(*)\text{有解，当且仅当其常数项组成的列向量是其未知量系数组成的}n\text{个}m\text{维列向量的倍数的和}$$
+
+**定义**
+
+$$ \text{设} {\alpha}_1,{\alpha}_2,\dots,{\alpha}_s\in \mathbb{F}^n(n\text{维向量})\; k_1,k_2,\dots,k_s\in \mathbb{F}$$
+
+$$\text{称}k_1{\alpha}_1+\dots+k_s{\alpha}_s\text{称为}{\alpha}_1,\dots,{\alpha}_s \text{的一个线性组合}(linear\;combination)$$
+
+$$\text{设} {\alpha}_1,{\alpha}_2,\dots,{\alpha}_s,{\alpha}\in \mathbb{F}^n$$
+
+$$\text{若}{\alpha}=k_1{\alpha}_1+k_2{\alpha}_2+\dots+k_s{\alpha}_s \text{则称} {\alpha} \text{可用} {\alpha}_1,\dots,{\alpha}_s \text{线性表示}$$
