@@ -8,7 +8,7 @@ category: '学习笔记'
 draft: false
 lang: 'zh_CN'
 ---
-由于这是第一次写笔记 ，会有很多数学公式，我会在结尾贴上一些LaTeX的代码。主要参考了[洛谷LaTeX格式手册](https://help.luogu.com.cn/rules/academic/handbook/latex)和[katex手册](https://katex.org/docs/supported.html)。
+由于这是第一次写笔记 ，会有很多数学公式。主要参考了[洛谷LaTeX格式手册](https://help.luogu.com.cn/rules/academic/handbook/latex)和[katex手册](https://katex.org/docs/supported.html)。
 
 ## 承接上一节课
 
@@ -155,3 +155,8 @@ $$\text{称}k_1{\alpha}_1+\dots+k_s{\alpha}_s\text{称为}{\alpha}_1,\dots,{\alp
 $$\text{设} {\alpha}_1,{\alpha}_2,\dots,{\alpha}_s,{\alpha}\in \mathbb{F}^n$$
 
 $$\text{若}{\alpha}=k_1{\alpha}_1+k_2{\alpha}_2+\dots+k_s{\alpha}_s \text{则称} {\alpha} \text{可用} {\alpha}_1,\dots,{\alpha}_s \text{线性表示}$$
+
+---
+不行了，打这个文章好力竭，数学公式好难打，不如手写✍️
+
+在使用数学公式的时候，在`$ $`之内的汉文字符需要用`\text{}`来框住，不然会出现偶尔的编码问题。
