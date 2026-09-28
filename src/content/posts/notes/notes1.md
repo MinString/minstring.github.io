@@ -113,6 +113,54 @@ $$
 \text{，其中}a_i\in\mathbb{F}
 $$
 
+**向量的加法与数乘**:
+
+设 $\mathbb{F}$ 是一个数域，且 $n\ge 1$。
+
+记
+
+$$
+\mathbb{F}^n=\{(a_1,a_2,\dots,a_n)\mid a_1,a_2,\dots,a_n\in\mathbb{F}\}
+$$
+
+在 $\mathbb{F}^n$ 上定义向量的加法以及数与向量的乘法（简称**数乘**）。
+
+设
+
+$$
+\alpha=(a_1,a_2,\dots,a_n),\quad
+\beta=(b_1,b_2,\dots,b_n)\in\mathbb{F}^n
+$$
+
+且 $k\in\mathbb{F}$，定义
+
+$$\alpha+\beta=(a_1+b_1,a_2+b_2,\dots,a_n+b_n)$$
+
+$$k\alpha=(ka_1,ka_2,\dots,ka_n)$$
+
+记 $\mathbf{0}=(0,0,\dots,0)$ 称 $\mathbf{0}$ 为**零向量**。
+
+对于 $\alpha=(a_1,a_2,\dots,a_n)$ 记  $-\alpha=(-a_1,-a_2,\dots,-a_n)$ 称 $-\alpha$ 为 $\alpha$ 的**负向量**。
+
+根据定义，上述两个运算满足如下性质。
+
+其中
+
+$$
+\alpha,\beta,\gamma\in\mathbb{F}^n,\quad k,l\in\mathbb{F}
+$$
+
+1. **(VS1) 加法结合律** $(\alpha+\beta)+\gamma=\alpha+(\beta+\gamma)$
+2. **(VS2) 加法交换律** $\alpha+\beta=\beta+\alpha$
+3. **(VS3) 零向量** $\alpha+\mathbf{0}=\alpha$
+4. **(VS4) 负向量** $\alpha+(-\alpha)=\mathbf{0}$
+5. **(VS5) 单位元** $1\alpha=\alpha$
+6. **(VS6) 数乘结合律** $(kl)\alpha=k(l\alpha)$
+7. **(VS7) 数乘对数的加法满足分配律** $(k+l)\alpha=k\alpha+l\alpha$
+8. **(VS8) 数乘对向量加法满足分配律** $k(\alpha+\beta)=k\alpha+k\beta$
+
+以上八条性质就是向量加法与数乘所满足的基本运算性质。
+
 **向量和线性方程组**
 
 $$
