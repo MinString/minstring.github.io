@@ -5,7 +5,7 @@ description: '数学分析的学习笔记'
 image: ''
 tags: ['学习笔记','数学分析']
 category: '学习笔记'
-draft: false sigma
+draft: false
 lang: 'zh_CN'
 ---
 
@@ -22,7 +22,7 @@ $$ \alpha - \varepsilon <a_N \le  a_n \le \alpha < \alpha + \varepsilon$$
 ### 定理内容
 
 设有一列闭区间 $[a_n,b_n],n \ge 1,a_n\ne b_n$，满足条件
-$$ [a_1,b_1]\supsetneq[1_2,b_2]\supsetneq \dots$$
+$$ [a_1,b_1]\supsetneq[a_2,b_2]\supsetneq \dots$$
 并且有
 $$ \lim_{n \to \infty}(a_n-b_n)=0 $$
 则存在唯一的实数 $\gamma$使得
@@ -47,7 +47,7 @@ $$ \lim_{n \to \infty}(a_n-b_n)=0$$
 
 有 $a_n=(1+\frac{1}{n})^n$
 $$a_n=1 \cdot (1+\frac{1}{n})^n <(\frac{1+n \cdot(1+\frac{1}{n})}{n+1})^{n+1}=(1+\frac{1}{n+1})^{n+1}=a_{n+1}$$
-$$\frac{1}{4}a_n=\frac{1}{2}\cdot\frac{1}{2}(1+\frac{1}{n})^n\le (\frac{\frac{1}{2}+\frac{1}{2}+n \cdot(1+\frac{1}{n})}{n+2})^{n+2}=1$$n
+$$\frac{1}{4}a_n=\frac{1}{2}\cdot\frac{1}{2}(1+\frac{1}{n})^n\le (\frac{\frac{1}{2}+\frac{1}{2}+n \cdot(1+\frac{1}{n})}{n+2})^{n+2}=1$$
 因此$a_n$单调有界，故他收敛。记
 
 $$\lim_{n\to\infty}a_n=e$$
