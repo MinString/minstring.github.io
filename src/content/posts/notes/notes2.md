@@ -252,3 +252,14 @@ $$
 **思路分析：**
 
 考虑分奇偶项，奇偶极限不同故数列发散。
+
+---
+
+## 勘误
+
+以下是发布后发现并已修正的错误，按所在小节列出。
+
+- 「Bolzano–Weierstrass定理」标题原拼写为 Bolazno-Weiestrass，已改为 Bolzano–Weierstrass。
+- 「作业1.2.6」证明的最后一行，分子原为 $\max\{a_1,a_2,\dots,a_{N_1}\}$（即前面的 $M$），应为 $\max\{a_1,a_2,\dots,a_n\}$，已修正。
+- 「作业1.2.6」情形二补充了推导：由于 $k\le n$，有 $\left|\frac{a_k}{n}\right|\le\left|\frac{a_k}{k}\right|<\varepsilon$。
+- 全文独立公式原来写在同一行的 `$$...$$` 中，被渲染成了行内公式，已改为单独成行显示。
