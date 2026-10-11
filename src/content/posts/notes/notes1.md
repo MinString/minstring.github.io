@@ -41,7 +41,7 @@ $$
 
 $\text{由}\mathbb{F}\text{中}m \cdot n \text{个数}a_{i,j}(i=1,2,\dots m \quad j=1,2,\dots,n)\text{构成矩阵图表}$
 
-$
+$$
 \qquad \qquad
 \begin{pmatrix}
 a_{11} & a_{12} & \cdots & a_{1n} \\
@@ -56,20 +56,20 @@ a_{21} & a_{22} & \cdots & a_{2n} \\
 \vdots & \vdots & \ddots & \vdots \\
 a_{m1} & a_{m2} & \cdots & a_{mn}
 \end{bmatrix}
-$
+$$
 
 $\text{称为数域}\mathbb{F}\text{上的}m\text{行}n\text{列矩阵}(matrix)\text{，简称为} m\times n\text{矩阵。特别地，若}m=n\text{，则称为方阵，也称为}n\text{阶方阵}$
 
 $\text{通常用大写字母}A,B,C,\dots \text{表示矩阵} \; \text{例如}A=(a_{i,j})_{m\times n}=(a_{i,j})\text{当上下文清楚时可以省略}m \times n$
 
 记
-$
+$$
 \begin{aligned}
 M_{m\times n}(\mathbb{F}) &= \{A=(a_{i,j})_{m\times n}\mid a_{i,j}\in \mathbb{F}\}\\
                           &= \mathbb{F}^{m\times n}
 \end{aligned}
 \qquad M_{n\times n}(\mathbb{F}) = M_{n}(\mathbb{F})
-$
+$$
 
 由线性方程组$(*)$得到两个矩阵
 
@@ -81,7 +81,10 @@ A=(a_{i,j})_{m\times n}\text{，}\tilde{A}=\left(
 \right)
 \in M_{m \times n+1}(\mathbb{F})
 $$
-$$A\text{称为系数矩阵}(coefficient\;matrix)\text{，}\tilde{A}\text{称为增广矩阵}(augmented\;matrix)$$
+
+$$
+A\text{称为系数矩阵}(coefficient\;matrix)\text{，}\tilde{A}\text{称为增广矩阵}(augmented\;matrix)
+$$
 
 与线性方程组的初等变换类似，可以对系数矩阵(增广矩阵)作如下变换:
 
@@ -99,7 +102,9 @@ $n\text{维向量空间称为}\mathbb{F}^n$
 
 **定义**：设 $n \le 1,\mathbb{F}\text{是一个数域，由}\mathbb{F}\text{中的}n\text{个数}a_1,a_2,\dots,a_n\text{构成的有序数组。}\alpha =(a_1,a_2,\dots,a_n)\text{称为}\mathbb{F}\text{上的}n\text{维}(\text{行})\text{向量}$
 
-$$\text{记}\mathbb{F}=\{(a_1,a_2,\dots,a_n)\mid a_1,a_2,\dots,a_n\in\mathbb{F}\}$$
+$$
+\text{记}\mathbb{F}=\{(a_1,a_2,\dots,a_n)\mid a_1,a_2,\dots,a_n\in\mathbb{F}\}
+$$
 
 $$
 \text{有时为了表达方便，会考虑n维列向量}\quad
@@ -134,9 +139,13 @@ $$
 
 且 $k\in\mathbb{F}$，定义
 
-$$\alpha+\beta=(a_1+b_1,a_2+b_2,\dots,a_n+b_n)$$
+$$
+\alpha+\beta=(a_1+b_1,a_2+b_2,\dots,a_n+b_n)
+$$
 
-$$k\alpha=(ka_1,ka_2,\dots,ka_n)$$
+$$
+k\alpha=(ka_1,ka_2,\dots,ka_n)
+$$
 
 记 $\mathbf{0}=(0,0,\dots,0)$ 称 $\mathbf{0}$ 为**零向量**。
 
@@ -189,20 +198,33 @@ $$
 
 由此，线性可以表示为
 
-$${\beta}_1x_1+{\beta}_2x_2+\dots+{\beta}_nx_n={\beta}$$
+$$
+{\beta}_1x_1+{\beta}_2x_2+\dots+{\beta}_nx_n={\beta}
+$$
+
 现在考虑$(*)$是否有解。现在可以这样表述：
 
-$$(*)\text{有解，当且仅当其常数项组成的列向量是其未知量系数组成的}n\text{个}m\text{维列向量的倍数的和}$$
+$$
+(*)\text{有解，当且仅当其常数项组成的列向量是其未知量系数组成的}n\text{个}m\text{维列向量的倍数的和}
+$$
 
 **定义**
 
-$$ \text{设} {\alpha}_1,{\alpha}_2,\dots,{\alpha}_s\in \mathbb{F}^n(n\text{维向量})\; k_1,k_2,\dots,k_s\in \mathbb{F}$$
+$$
+\text{设} {\alpha}_1,{\alpha}_2,\dots,{\alpha}_s\in \mathbb{F}^n(n\text{维向量})\; k_1,k_2,\dots,k_s\in \mathbb{F}
+$$
 
-$$\text{称}k_1{\alpha}_1+\dots+k_s{\alpha}_s\text{称为}{\alpha}_1,\dots,{\alpha}_s \text{的一个线性组合}(linear\;combination)$$
+$$
+\text{称}k_1{\alpha}_1+\dots+k_s{\alpha}_s\text{称为}{\alpha}_1,\dots,{\alpha}_s \text{的一个线性组合}(linear\;combination)
+$$
 
-$$\text{设} {\alpha}_1,{\alpha}_2,\dots,{\alpha}_s,{\alpha}\in \mathbb{F}^n$$
+$$
+\text{设} {\alpha}_1,{\alpha}_2,\dots,{\alpha}_s,{\alpha}\in \mathbb{F}^n
+$$
 
-$$\text{若}{\alpha}=k_1{\alpha}_1+k_2{\alpha}_2+\dots+k_s{\alpha}_s \text{则称} {\alpha} \text{可用} {\alpha}_1,\dots,{\alpha}_s \text{线性表示}$$
+$$
+\text{若}{\alpha}=k_1{\alpha}_1+k_2{\alpha}_2+\dots+k_s{\alpha}_s \text{则称} {\alpha} \text{可用} {\alpha}_1,\dots,{\alpha}_s \text{线性表示}
+$$
 
 ---
 不行了，打这个文章好力竭，数学公式好难打，不如手写✍️
@@ -219,6 +241,7 @@ $$\text{若}{\alpha}=k_1{\alpha}_1+k_2{\alpha}_2+\dots+k_s{\alpha}_s \text{则�
 
 - 「1.2矩阵」定义中“若 $m=n$ 称为方阵，称为 $n$ 阶方阵”，改为“若 $m=n$，则称为方阵，也称为 $n$ 阶方阵”。
 - 「1.2矩阵」初等变换一段，“称上面的三种变换称为…”多了一个“称”，已删去。
+- 全文有 12 个独立公式原来写在同一行的 `$$...$$` 中，或用单个 `$` 包住，被渲染成了行内公式，已改为单独成行显示。
 
 **待修正**
 
