@@ -148,7 +148,7 @@ $$
 **注** $I_\lambda$是一个开集不一定是一个单独的开区间
 <!-- 那么由于$\gamma\in X$则存在一个 $\lambda_0\in\Lambda$ 使得$\gamma \in I_{\lambda_0}$,不妨换一个表达方式令$I_{\lambda_0}=(\alpha,\beta)$，令$\delta=min\{\gamma-\alpha,\beta-\gamma\}$，对于这些区间$J$必然存在$N$使得任意的$n>N$有$|J_n|<\delta$那么又由于 $\forall n\in\mathbb{N},\gamma\in J_n$ 当 $|J_n|<\delta$时，有$J_n\subseteq I_{\lambda_0}$，这表明$n>N$时，我们所假设的无限个无法被有限个子覆盖覆盖的$J_n$被有限的开区间覆盖了，这与我们的假设矛盾。$\Box$ -->
 
-### Bolazno-Weiestrass定理(波尔查诺–魏尔斯特拉斯定理)
+### Bolzano–Weierstrass定理(波尔查诺–魏尔斯特拉斯定理)
 
 **定理内容：** 有界数列必有收敛子列
 
@@ -238,7 +238,7 @@ $$
 故
 
 $$
-\forall \varepsilon>0 \;\exist N \;\text{s.t.}\; \forall n>N , |\frac{\max\{a_1,a_2,\dots,a_{N_1}\}}{n}|<\varepsilon \;\Box
+\forall \varepsilon>0 \;\exist N \;\text{s.t.}\; \forall n>N , |\frac{\max\{a_1,a_2,\dots,a_n\}}{n}|<\varepsilon \;\Box
 $$
 
 **思路分析：**
