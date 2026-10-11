@@ -58,7 +58,7 @@ a_{m1} & a_{m2} & \cdots & a_{mn}
 \end{bmatrix}
 $
 
-$\text{称为数域}\mathbb{F}\text{上的}m\text{行}n\text{列矩阵}(matrix)\text{，简称为} m\times n\text{矩阵。特别地，若}m=n\text{称为方阵，称为}n\text{阶方阵}$
+$\text{称为数域}\mathbb{F}\text{上的}m\text{行}n\text{列矩阵}(matrix)\text{，简称为} m\times n\text{矩阵。特别地，若}m=n\text{，则称为方阵，也称为}n\text{阶方阵}$
 
 $\text{通常用大写字母}A,B,C,\dots \text{表示矩阵} \; \text{例如}A=(a_{i,j})_{m\times n}=(a_{i,j})\text{当上下文清楚时可以省略}m \times n$
 
@@ -89,7 +89,7 @@ $$A\text{称为系数矩阵}(coefficient\;matrix)\text{，}\tilde{A}\text{称为
 2. 用一个非$0$的数乘以某一行
 3. 将某一行乘以$k$加到某一行上
 
-称上面的三种变换称为矩阵的初等变换 $(elementary\;row\;transformation/operation)$，类似地有初等列变换 $(elementary\;column\;transformation/operation)$
+上面的三种变换称为矩阵的初等变换 $(elementary\;row\;transformation/operation)$，类似地有初等列变换 $(elementary\;column\;transformation/operation)$
 
 ## 1.3向量空间
 
