@@ -37,7 +37,7 @@ $$
 
 ## 1.2矩阵
 
-**定义** $\text{设}m,n\le1,\text{且设}\mathbb{F}\text{是一个数域}$
+**定义** $\text{设}m,n\ge1,\text{且设}\mathbb{F}\text{是一个数域}$
 
 $\text{由}\mathbb{F}\text{中}m \cdot n \text{个数}a_{i,j}(i=1,2,\dots m \quad j=1,2,\dots,n)\text{构成矩阵图表}$
 
@@ -100,7 +100,7 @@ $n\text{维向量空间称为}\mathbb{F}^n$
 
 **向量**：具有大小和方向的量n
 
-**定义**：设 $n \le 1,\mathbb{F}\text{是一个数域，由}\mathbb{F}\text{中的}n\text{个数}a_1,a_2,\dots,a_n\text{构成的有序数组。}\alpha =(a_1,a_2,\dots,a_n)\text{称为}\mathbb{F}\text{上的}n\text{维}(\text{行})\text{向量}$
+**定义**：设 $n \ge 1,\mathbb{F}\text{是一个数域，由}\mathbb{F}\text{中的}n\text{个数}a_1,a_2,\dots,a_n\text{构成的有序数组。}\alpha =(a_1,a_2,\dots,a_n)\text{称为}\mathbb{F}\text{上的}n\text{维}(\text{行})\text{向量}$
 
 $$
 \text{记}\mathbb{F}=\{(a_1,a_2,\dots,a_n)\mid a_1,a_2,\dots,a_n\in\mathbb{F}\}
@@ -241,12 +241,12 @@ $$
 
 - 「1.2矩阵」定义中“若 $m=n$ 称为方阵，称为 $n$ 阶方阵”，改为“若 $m=n$，则称为方阵，也称为 $n$ 阶方阵”。
 - 「1.2矩阵」初等变换一段，“称上面的三种变换称为…”多了一个“称”，已删去。
+- 「1.2矩阵」定义中的 $m,n\le 1$（小于等于）应为 $m,n\ge 1$（大于等于），已修正。
+- 「1.3向量空间」定义中的 $n\le 1$ 应为 $n\ge 1$，已修正。
 - 全文有 12 个独立公式原来写在同一行的 `$$...$$` 中，或用单个 `$` 包住，被渲染成了行内公式，已改为单独成行显示。
 
 **待修正**
 
-- 「1.2矩阵」定义中的 $m,n\le 1$ 应为 $m,n\ge 1$。
-- 「1.3向量空间」定义中的 $n\le 1$ 应为 $n\ge 1$。
 - 「1.3向量空间」定义下方“记 $\mathbb{F}=\{(a_1,a_2,\dots,a_n)\mid\dots\}$”应为 $\mathbb{F}^n$。
 - 「1.2矩阵」增广矩阵所属的 $M_{m\times n+1}(\mathbb{F})$ 宜写成 $M_{m\times(n+1)}(\mathbb{F})$。
 - 「1.3向量空间」中“向量：具有大小和方向的量n”，末尾多了一个 n。
