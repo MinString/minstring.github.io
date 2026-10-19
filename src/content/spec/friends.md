@@ -52,4 +52,16 @@
             <td style="text-align: center; vertical-align: middle;"><a target="_blank" href="https://tino912.github.io/">网站</a></br></td>
         </tr>
     </tbody>
+<tbody>
+         <tr>
+            <td style="text-align: center; vertical-align: middle;">
+            <img class="customEntitityAlbum" style="background-color:transparent; width:100px; height:100px" src="https://clouds-remain.github.io/assets/avatar.jpg"/>
+            </td>
+            <td style="text-align: center; vertical-align: middle;">
+              Clouds-remain
+            </td>
+            <td style="text-align: center; vertical-align: middle;">我的灵魂腐烂在那个夏日的一场梦境</td>
+            <td style="text-align: center; vertical-align: middle;"><a target="_blank" href="https://clouds-remain.github.io/">网站</a></br></td>
+        </tr>
+    </tbody>
 </table>

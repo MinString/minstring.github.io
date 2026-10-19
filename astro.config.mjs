@@ -1,3 +1,5 @@
+import { createRequire } from "node:module";
+import path from "node:path";
 import sitemap from "@astrojs/sitemap";
 import svelte from "@astrojs/svelte";
 import tailwind from "@astrojs/tailwind";
@@ -24,6 +26,25 @@ import { GithubCardComponent } from "./src/plugins/rehype-component-github-card.
 import { parseDirectiveNode } from "./src/plugins/remark-directive-rehype.js";
 import { remarkExcerpt } from "./src/plugins/remark-excerpt.js";
 import { remarkReadingTime } from "./src/plugins/remark-reading-time.mjs";
+
+/*
+ * rehype-katex 渲染公式时用的是它自己依赖的 katex（当前 0.16.x），而项目里直接安装的 katex（0.18.x）
+ * 把字号相关的类名从 `.sizing` 改成了 `.katex-sizing`，导致 0.18 的 katex.css 里的字号规则全部匹配不上
+ * （最明显的现象就是公式的下标、上标、分数里的字与正文一样大）。
+ * 这里按渲染端解析出 CSS 路径，让样式与真正产出 HTML 的 katex 版本保持一致。
+ */
+const require = createRequire(import.meta.url);
+let katexCssPath = "katex/dist/katex.css";
+try {
+	const rehypeKatexEntry = require.resolve("rehype-katex");
+	katexCssPath = require.resolve("katex/dist/katex.css", {
+		paths: [path.dirname(rehypeKatexEntry)],
+	});
+} catch {
+	console.warn(
+		"[astro.config] 无法解析 rehype-katex 依赖的 katex，回退到项目内的 katex.css，公式字号可能与渲染端不匹配",
+	);
+}
 
 // https://astro.build/config
 export default defineConfig({
@@ -160,6 +181,12 @@ export default defineConfig({
 	},
 
 	vite: {
+		resolve: {
+			alias: {
+				// 见文件顶部说明：让 KaTeX 的 CSS 与 rehype-katex 实际使用的版本一致，否则公式字号规则失效
+				"katex/dist/katex.css": katexCssPath,
+			},
+		},
 		build: {
 			rollupOptions: {
 				onwarn(warning, warn) {
