@@ -29,3 +29,6 @@ yarn.lock
 # ide
 .idea
 *.iml
+
+# 本地工作脚本/临时产物，不要提交（曾泄露过个人信息）
+.dsh-work/
