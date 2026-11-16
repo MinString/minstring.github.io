@@ -181,23 +181,6 @@ export default defineConfig({
 	},
 
 	vite: {
-		plugins: [
-			{
-				// 项目放在 NTFS（ntfs3，带 ads 选项）分区上时，`astro:assets` 会被当成
-				// `astro` 的备选数据流，Node 的包解析会误判存在名为 `astro:assets` 的包，
-				// 从而把 astro 主入口、Vite、Rollup 全部拖进 SSR 构建（表现为 fsevents、
-				// lightningcss 的 ../pkg 等一连串解析错误）。Astro 的 astro:assets 插件
-				// 没有 enforce: "pre"，会在 Vite 的 node 解析之后才执行，所以在这里提前
-				// 把它解析成 Astro 自己的虚拟模块。
-				name: "astro-assets-virtual-module-first",
-				enforce: "pre",
-				resolveId(source) {
-					if (source === "astro:assets") {
-						return "\0astro:assets";
-					}
-				},
-			},
-		],
 		resolve: {
 			alias: {
 				// 见文件顶部说明：让 KaTeX 的 CSS 与 rehype-katex 实际使用的版本一致，否则公式字号规则失效
@@ -206,9 +189,6 @@ export default defineConfig({
 		},
 		build: {
 			rollupOptions: {
-				// fsevents 是 Rollup 的 macOS-only 可选依赖，pnpm 在 Linux 上不会安装它；
-				// 而 Rollup 的 ESM 入口会被 SSR 构建带进来，不标 external 会让构建直接失败。
-				external: ["fsevents"],
 				onwarn(warning, warn) {
 					// temporarily suppress this warning
 					if (

@@ -1,3 +1,14 @@
+/* 全局样式的唯一入口：所有子样式在这里合并成同一个 CSS 编译单元。
+   Tailwind 的 @apply 只能引用同一单元里 @layer 定义的类，
+   所以 markdown.css 里的 `@apply link` 必须和 main.css 的 `.link` 一起编译。 */
+@import "./variables.styl";
+@import "./markdown.css";
+@import "./markdown-extend.styl";
+@import "./photoswipe.css";
+@import "./scrollbar.css";
+@import "./transition.css";
+@import "./expressive-code.css";
+
 @tailwind components;
 
 @layer components {
