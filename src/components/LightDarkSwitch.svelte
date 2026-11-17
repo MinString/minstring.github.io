@@ -1,10 +1,10 @@
 <script lang="ts">
 import "../styles/theme-transition.css";
 import { AUTO_MODE, DARK_MODE, LIGHT_MODE } from "@constants/constants.ts";
+import { moonIcon, sunIcon, systemIcon } from "@constants/theme-icons";
 import I18nKey from "@i18n/i18nKey";
 import { i18n } from "@i18n/translation";
 import Icon from "@iconify/svelte";
-import { sunIcon, moonIcon, systemIcon } from "@constants/theme-icons";
 import {
 	applyThemeToDocument,
 	getStoredTheme,
@@ -13,7 +13,7 @@ import {
 import { onMount, tick } from "svelte";
 import type { LIGHT_DARK_MODE } from "@/types/config.ts";
 
-let { class: className = '' } = $props();
+let { class: className = "" } = $props();
 
 let mode: LIGHT_DARK_MODE = $state(AUTO_MODE);
 let switching = false;
@@ -38,17 +38,22 @@ onMount(() => {
 async function switchScheme(newMode: LIGHT_DARK_MODE) {
 	if (switching || newMode === mode) return;
 	const root = document.documentElement;
-	const willBeDark = newMode === DARK_MODE ||
-		(newMode === AUTO_MODE && window.matchMedia("(prefers-color-scheme: dark)").matches);
+	const willBeDark =
+		newMode === DARK_MODE ||
+		(newMode === AUTO_MODE &&
+			window.matchMedia("(prefers-color-scheme: dark)").matches);
 	const apply = async () => {
 		mode = newMode;
 		setTheme(newMode);
 		await tick();
 	};
 	const button = document.getElementById("scheme-switch");
-	if (!document.startViewTransition || !button ||
+	if (
+		!document.startViewTransition ||
+		!button ||
 		window.matchMedia("(prefers-reduced-motion: reduce)").matches ||
-		root.classList.contains("dark") === willBeDark) {
+		root.classList.contains("dark") === willBeDark
+	) {
 		await apply();
 		return;
 	}
@@ -67,8 +72,17 @@ async function switchScheme(newMode: LIGHT_DARK_MODE) {
 		try {
 			await transition.ready;
 			await root.animate(
-				{ clipPath: [`circle(0px at ${x}px ${y}px)`, `circle(${radius}px at ${x}px ${y}px)`] },
-				{ duration: 650, easing: "ease-in-out", pseudoElement: "::view-transition-new(root)" },
+				{
+					clipPath: [
+						`circle(0px at ${x}px ${y}px)`,
+						`circle(${radius}px at ${x}px ${y}px)`,
+					],
+				},
+				{
+					duration: 650,
+					easing: "ease-in-out",
+					pseudoElement: "::view-transition-new(root)",
+				},
 			).finished;
 		} catch {
 			// A skipped snapshot still applies the selected theme.

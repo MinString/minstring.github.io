@@ -1,24 +1,24 @@
 <script lang="ts">
-	import I18nKey from "@i18n/i18nKey";
-	import { i18n } from "@i18n/translation";
-	import { onMount } from "svelte";
+import I18nKey from "@i18n/i18nKey";
+import { i18n } from "@i18n/translation";
+import { onMount } from "svelte";
 
-	let {
-		envId = "",
-		lang = "zh-CN",
-	}: {
-		envId: string;
-		lang?: string;
-	} = $props();
+let {
+	envId = "",
+	lang = "zh-CN",
+}: {
+	envId: string;
+	lang?: string;
+} = $props();
 
-	const TWIKOO_DARK_STYLE_ID = "twikoo-theme-adapt-style";
+const TWIKOO_DARK_STYLE_ID = "twikoo-theme-adapt-style";
 
-	function injectTwikooThemeStyle() {
-		if (document.getElementById(TWIKOO_DARK_STYLE_ID)) return;
+function injectTwikooThemeStyle() {
+	if (document.getElementById(TWIKOO_DARK_STYLE_ID)) return;
 
-		const style = document.createElement("style");
-		style.id = TWIKOO_DARK_STYLE_ID;
-		style.textContent = `
+	const style = document.createElement("style");
+	style.id = TWIKOO_DARK_STYLE_ID;
+	style.textContent = `
 html.dark .twikoo {
 	--tk-text: rgba(255, 255, 255, 0.75);
 	--tk-text-strong: rgba(255, 255, 255, 0.9);
@@ -85,27 +85,27 @@ html:not(.dark) .twikoo .OwO .OwO-body {
 	color: inherit !important;
 }
 `.trim();
-		document.head.appendChild(style);
-	}
+	document.head.appendChild(style);
+}
 
-	onMount(() => {
-		injectTwikooThemeStyle();
+onMount(() => {
+	injectTwikooThemeStyle();
 
-		if (!envId) return;
+	if (!envId) return;
 
-		const script = document.createElement("script");
-		script.src = "//cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js";
-		script.onload = () => {
-			// @ts-ignore
-			twikoo.init({
-				envId,
-				el: "#tcomment",
-				lang,
-				path: window.location.pathname,
-			});
-		};
-		document.head.appendChild(script);
-	});
+	const script = document.createElement("script");
+	script.src = "//cdn.jsdelivr.net/npm/twikoo/dist/twikoo.all.min.js";
+	script.onload = () => {
+		// @ts-expect-error
+		twikoo.init({
+			envId,
+			el: "#tcomment",
+			lang,
+			path: window.location.pathname,
+		});
+	};
+	document.head.appendChild(script);
+});
 </script>
 
 <div class="card-base px-6 md:px-9 pt-6 pb-4 mb-4 w-full overflow-hidden">
