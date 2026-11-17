@@ -16,7 +16,7 @@ export const navBarConfig: NavBarConfig = {
 };
 
 export const profileConfig: ProfileConfig = {
-	avatar: "assets/images/avatar.png",
+	avatar: "assets/images/avatar.jpg",
 	name: "MinString",
 	bio: "欢迎您！",
 	links: [

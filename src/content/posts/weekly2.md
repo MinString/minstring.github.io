@@ -1,9 +1,9 @@
 ---
-title: 完全做不到的weekly2
+title: 东拼西凑-2
 published: 2026-09-27
 description: '很难周更了，看看这几天都干了什么吧'
 image: ''
-tags: [随笔]
+tags: ['随笔','日常','军训','编程','脚本','漫展','Linux']
 category: '随笔'
 draft: false
 lang: 'zh_CN'
